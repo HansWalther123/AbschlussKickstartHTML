@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <head>
+        
+   
+
+  </head>
+  <body>
+    <body style="background-image:url(BackgroundAdmin.jpg); height: 100vh; background-size: cover;">
+        
+        <!-- navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./logo.png" width="100" height="35">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Start</a>
+              <a class="nav-link" href="#">Kalender</a>
+              <a class="nav-link" href="#">Kontakt</a>
+          
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<!-- navigationsleiste--> 
+  <div class="container">
+  <div class="card border-0 shadow my-5 ">
+      
+    <br>
+    
+    <div class="tab-content">
+        <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#kalender">Kalender</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#trainer">Trainer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#todo">To-Do</a>
+            </li>
+          </ul>
+
+
+            
+        <div id="kalender" class="container tab-pane active "><!-- Termin Seite Admin  -->
+          <br>
+            <!--formular-->
+            <form class="">
+                <div class="form-row" >
+
+                  <div class="col-md-4 mb-3"><!--Datum-->
+                      <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-calendar3" style="color:rgb(114, 20, 202);"></i></span>
+                            </div>
+                          <input type="text" class="form-control" id="Date" placeholder="Datum" required>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 mb-3"><!--Zeit-->
+                      <div class="input-group">
+                           <div class="input-group-prepend">
+                              <span class="input-group-text" ><i class="bi bi-clock" style="color:rgb(114, 20, 202);"></i></span>
+                           </div>
+                          <input type="text" class="form-control"  placeholder="Start; Ende"  required>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 mb-3" ><!--Trainer-->
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" ><i class="bi bi-person-rolodex" style="color:rgb(114, 20, 202);"></i></span>
+                          </div>
+                        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Trainer" aria-describedby="inputGroupPrepend2" required>
+                      </div>
+                  </div>
+
+                </div>
+
+                  <div class="form-row"><!--Thema-->
+                        <div class="col-md-4 mb-1">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupPrepend2" style="color:rgb(114, 20, 202);"><i class="bi bi-newspaper"></i></span>
+                                </div>
+                              <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Thema" aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>  
+                      <button class="btn btn-primary " style="background-color: blueviolet;" type="submit">Abschicken</button>   
+                </div>
+            
+            </form>
+
+            <br><!--platzhalter-->
+            
+                <!-- hier die Tabele, die ersten 2 Zeilen sind schon mit beispielen befüllt-->
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Trainer</th>
+                    <th scope="col">Thema</th>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Start</th>
+                    <th scope="col">Ende</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Leon Plumpe</th>
+                    <td>Java</td>
+                    <td>05.10</td>
+                    <td>9:00</td>
+                    <td>16:00</td>
+                    <td><button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button></td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">Armin Schleiter</th>
+                    <td>HTML</td>
+                    <td>16.10</td>
+                    <td>13:00</td>
+                    <td>16:00</td>
+                    <td><button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button></td>
+                  </tr>
+                </tbody>
+            </table>
+            
+
+        </div>
+
+            <br>
+
+        <div id="trainer" class="container tab-pane fade "><!-- Trainer verwaltung Admin  -->
+              <br>
+              <form class="">
+                <div class="form-row " >
+    
+                  <div class="col-md-4 mb-3"><!--Vorname-->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-file-earmark-person"style="color:rgb(114, 20, 202);"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="first_name" placeholder="Vorname" required>
+                      </div>
+                  </div>
+    
+                  <div class="col-md-4 mb-3"><!--Nachname-->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" ><i class="bi bi-file-earmark-person-fill"style="color:rgb(114, 20, 202);"></i></span>
+                        </div>
+                        <input type="text" class="form-control"  placeholder="Nachname"  required>
+                      </div>
+                  </div>
+    
+                  <div class="col-md-4 mb-3" ><!--Position-->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" ><i class="bi bi-signpost-2-fill" style="color:rgb(114, 20, 202);"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="position" placeholder="Position" aria-describedby="inputGroupPrepend2" required>
+                      </div>
+                  </div>
+                </div>
+    
+                    <div class="form-row">
+                        <div class="col-md-4 mb-1"><!--email-->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2" style="color:rgb(114, 20, 202);"><i class="bi bi-envelope-fill"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="email" placeholder="E-mail" aria-describedby="inputGroupPrepend2" required>
+                          </div>
+                        </div> 
+
+                        <div class="col-md-4 mb-3"><!--Telefon-->
+                          <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-telephone-fill" style="color:rgb(114, 20, 202);"></i></span>
+                              </div>
+                              <input type="text" class="form-control" id="fone" placeholder="Telefonnummer" >
+                            </div>
+                        </div> 
+
+                        <div class="col-md-4 mb-3"><!--linkedIn-->
+                          <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-linkedin" style="color:rgb(114, 20, 202);"></i></span>
+                              </div>
+                              <input type="text" class="form-control" id="linkedIn" placeholder="LinkedIn " >
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="form-row">
+
+                      <div class="col-md-4 mb-3"><!--Thenanbereich-->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-bookmarks-fill" style="color:rgb(114, 20, 202);"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="theme" placeholder="Thema" required>
+                          </div>
+                      </div>
+
+                      <div class="col-md-4 mb-3"><!--über den trainer-->
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-info-square" style="color:rgb(114, 20, 202);"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="trainerInfo" placeholder="Trainer info" >
+                          </div>
+                      </div>
+                      <button class="btn btn-primary " style="background-color: blueviolet; position: relative; left: 50px;" type="submit" >Abschicken</button> 
+                    </div>
+                  
+                </form>
+    
+                <br><!--platzhalter-->
+                
+                    <!-- hier die Tabele, die ersten 2 Zeilen sind schon mit beispielen befüllt-->
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Vorname</th>
+                        <th scope="col">Nachname</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefon</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Thema</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Leon</th>
+                        <td>Plumpe</td>
+                        <td>leon.plumpe@accenture.com</td>
+                        <td>0800 666 333</td>
+                        <td>Dualer Student</td>
+                        <td>Java</td>
+                        <td><button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button></td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row">Lucas</th>
+                        <td>Plumpe</td>
+                        <td>Lucas.plumpe@accenture.com</td>
+                        <td>0800 999 444</td>
+                        <td>Dualer Student</td>
+                        <td>HTML</td>
+                        <td><button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button></td>
+                        </tr>
+                    </tbody>
+                  </table>
+
+                  
+        </div>
+
+     <div id="todo" class="container tap-plane fade" style="position: relative; margin:0; left:30%;"><!-- To-Do verwaltung Admin  -->
+           
+      <div class="col-md-4 mb-3" style="position: relative; right: 15px;"><!--Task eingabe-->
+          <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-bookmark-fill" style="color: blueviolet;"></i></span>
+              </div>
+              <input type="text" class="form-control" id="new_task" placeholder="neue Aufgabe" >
+              <button type="button" class="btn btn-primary" style="background-color: blueviolet;">Submit</button>
+            </div>
+           
+        </div>
+
+
+      <div class="card text-dark bg-light mb-3" style="max-width: 18rem;"> 
+        <h4 class="card-header">To-Do Verwaltung</h4>
+
+        
+      <div class="container" style="font-size: large;">
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Aufgabe 1
+          </label>
+          <button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Aufgabe 2
+          </label>
+          <button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Aufgabe 3
+          </label>
+          <button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Aufgabe 4
+          </label>
+          <button type="button" class="btn btn-light"><i class="bi bi-trash-fill" style="color:rgb(114, 20, 202);"></i></button>
+        </div>
+        
+        
+        </div>
+           
+      </div>
+      
+    <br>
+    
+
+
+
+
+     </div>
+    </div>
+
+  </div>
+  </div>
+    <br>
+  </body>
+
+</html>
