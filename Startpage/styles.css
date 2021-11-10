@@ -61,14 +61,22 @@ body{ margin: 0;
 	
 }
 .header-content p{
-	font-size: 1.5rem;
-	display: block;
-	padding-bottom: 2rem;
-	margin-top: 10px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
 }
 
 .my-btn{
 	padding: 1rem 1rem;
+}
+.Arrow{
+	color: white;
+	margin-top: 15%;
+	
+	
 }
 
 @media(max-width:768px){
